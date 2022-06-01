@@ -25,6 +25,8 @@ def calculation():
 
     iteration = 0
     Xn = initial_guess
+    x_axis = np.array([])
+    y_axis = np.array([])
 
     while True:
         
@@ -39,6 +41,16 @@ def calculation():
         if (iteration > user_step):
             print('\n\nThe Root is',round(Xn,acc))
             break
+            
+     font1 = {'family':'monospace','color':'maroon','size':20}
+     font2 = {'family':'monospace','color':'maroon','size':20}
+     font3 = {'family':'sans-serif','color':'indianred','size':25}
+ 
+     plt.plot(x_axis, y_axis, marker = '*')
+     plt.title('Plot of Newton Raphson', fontdict = font3)
+     plt.xlabel("Xn", fontdict = font1)
+     plt.ylabel("f(Xn)", fontdict = font2)
+     plt.show()
 
 # Defining main function
 def main():
