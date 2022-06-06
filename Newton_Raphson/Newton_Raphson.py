@@ -34,6 +34,9 @@ def calculation():
         GXn = g(Xn)
         hn = -(f(Xn)/g(Xn))
         Xn2 = Xn + hn
+        
+        x_axis = np.append(x_axis, Xn)
+        y_axis = np.append(y_axis, FXn)
 
         print('%d        %f   %0.7f    %0.4f    %f           %0.8f' %(iteration, Xn, FXn, GXn, hn, Xn2))
         iteration = iteration + 1
